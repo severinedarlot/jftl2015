@@ -1,0 +1,1 @@
+{{#if context.call_prefix}}{{{ context.call_prefix }}}.{{/if}}{{{ camelize_lower rendered_children.actionword }}}(assert{{#if rendered_children.arguments}}, {{/if}}{{{ join rendered_children.arguments ', '}}});

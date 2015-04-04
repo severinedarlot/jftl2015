@@ -1,0 +1,19 @@
+import Ember from "ember";
+import {{#curly}} module, test {{/curly}} from 'qunit';
+import startApp from '../../helpers/start-app';
+import Actionwords from './actionwords';
+var App, actionwords = Actionwords.create();;
+ 
+module('{{{ remove_quotes project_name }}}', {{#curly}}
+  beforeEach: function() {{#curly}}
+    App = startApp();
+  {{/curly}},
+  afterEach: function() {{#curly}}
+    Ember.run(App, App.destroy);
+  {{/curly}}
+{{/curly}});
+
+{{#each rendered_children.scenarios}}{{{this}}}
+
+{{/each}}
+

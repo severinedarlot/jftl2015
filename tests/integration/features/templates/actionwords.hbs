@@ -1,0 +1,8 @@
+import Ember from "ember";
+
+var Actionwords = Ember.Object.extend({{#curly}}{{#indent}}{{#join rendered_children.actionwords ","}}
+{{{this}}}{{/join}}
+{{/indent}}
+{{/curly}});
+
+export default Actionwords;
