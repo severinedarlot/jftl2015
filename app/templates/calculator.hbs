@@ -1,0 +1,95 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+    	<form role="form-horizontal" role="form">
+          <div class="row form-group">
+              <label class="col-xs-9">Nombre de titres à masteriser de moins de 4' </label>
+              {{input type="number" class="col-xs-3 count-input" value=firstSliceCount min="0" max="30"}}
+          </div>
+          <div class="row form-group">
+            <label class="col-xs-9">Nombre de titres à masteriser entre 4' et 8' </label>
+            {{input type="number" class="col-xs-3 count-input" value=secondSliceCount min="0" max="30"}}
+          </div>
+          <div class="row form-group">
+            <label class="col-xs-9">Nombre de titres à masteriser entre 8' et 12' </label>
+            {{input type="number" class="col-xs-3 count-input" value=thirdSliceCount min="0" max="30"}}
+          </div>
+          <div class="row form-group">
+            <label class="col-xs-9">Nombre de titres à masteriser de plus de 12' </label>
+            {{input type="number" class="col-xs-3 count-input" value=fourthSliceCount min="0" max="30"}}
+          </div>
+          <div class="checkbox">
+            <label>
+              {{input type="checkbox" checkedBinding='ddp'}} Master DDP ({{ddpPackage}} &#8364; + {{ddpByTitle}} &#8364; par titre)
+            </label>
+            <div {{bind-attr class="ddp:hidden :alert :alert-warning"}} role="alert">Dans ce cas, nous vous livrons les fichiers .wav (16bits, 44.1 kHz) sur un serveur (ou un CD) et vous devrez les assembler sur un CD si besoin. Les encodages ISRC, EAN ainsi que CDTEXT vous incombent. Notez également qu'une image DDP est plus fiable qu'un CD-R pour créer un glass-master.</div>
+          </div>
+          <div class="checkbox">
+            <label>
+              {{input type="checkbox" checkedBinding='stems'}} Mastering par stems (autres que PBO + a cappella) (+ 20%)
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              {{input type="checkbox" checkedBinding='alternative'}} Version alternative (PBO, vocal up) (+ 10%)
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              {{input type="checkbox" checkedBinding='online'}} Mastering online (- 15%)
+            </label>
+            <div {{bind-attr class="online::hidden :alert :alert-warning"}} role="alert">Dans ce cas, vous n'assistez pas à la scéance de mastering. Nous communiquerons par mail ou par téléphone.</div>
+          </div>
+            <div class="checkbox">
+            <label>
+              {{input type="checkbox" checkedBinding='shipping'}} Envoi postal (+ 10 &#8364;)
+            </label>
+          </div>
+        </form>
+    </div>    
+    <div class="col-md-6">
+    	<table class="table table-striped">
+        <tr>
+        <td>{{totalCount}} x traitements mastering (réglage individuel pour chaque titre)</td>
+        <td>{{titlesPrice}} &#8364;</td>
+        </tr>
+        <tr {{bind-attr class="stems::hidden"}}>
+        <td>Morceaux fournis sous forme de stems</td>
+        <td>{{stemsTotalPrice}} &#8364;</td>
+        </tr>
+        <tr {{bind-attr class="ddp::hidden"}}>
+        <td>Création image DDP</td>
+        <td>{{ddpPrice}} &#8364; </td>
+        </tr>
+        <tr {{bind-attr class="ddp:hidden"}}>
+        <td>Envoi de fichiers WAV</td>
+        <td>0 &#8364;</td>
+        </tr>
+        <tr {{bind-attr class="alternative::hidden"}}>
+        <td>Version alternative</td>
+        <td>{{alternativePrice}} &#8364;</td>
+        </tr>
+        <tr {{bind-attr class="online::hidden"}}>
+        <td>Mastering en ligne</td>
+        <td>{{onlinePrice}} &#8364;</td>
+        </tr>
+        <tr {{bind-attr class="shipping::hidden"}}>
+        <td>Envoi postal et manutention</td>
+        <td>{{shippingPrice}} &#8364;</td>
+        </tr>
+        <tr>
+        <td>Total HT</td>
+        <td>{{htPrice}} &#8364; HT</td>
+        </tr>
+        <tr>
+        <td>TVA</td>
+        <td>20 &#37;</td>
+        </tr>
+        <tr>
+        <td>Total TTC</td>
+        <td>{{ttcPrice}} &#8364; TTC</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

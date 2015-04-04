@@ -2,16 +2,12 @@ import Ember from "ember";
 
 var Actionwords = Ember.Object.extend({
   etantDonneLaCalculatrice: function (assert) {
-    // TODO: Implement action: "Etant donné la calculatrice"
-    throw 'Not implemented';
+    visit('/');
   },
-  quandOnAjouteP1TitresDeMoinsDe4Minutes: function (assert, p1) {
-    // TODO: Implement action: "Quand on ajoute " + String(p1) + " titres de moins de 4 minutes"
-    throw 'Not implemented';
-  },
-  alorsLeTotalTTCDoitEtreP1TTC: function (assert, p1) {
-    // TODO: Implement action: "Alors le total TTC doit être " + String(p1) + " € TTC"
-    throw 'Not implemented';
+  leTitreDoitEtreP1: function (assert, p1) {
+    andThen(function() {
+      assert.equal(find('h2').text(), p1, "Page contains the title");
+    });
   }
 });
 

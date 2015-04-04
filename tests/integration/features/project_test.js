@@ -2,9 +2,9 @@ import Ember from "ember";
 import { module, test } from 'qunit';
 import startApp from '../../helpers/start-app';
 import Actionwords from './actionwords';
-var App, actionwords = Actionwords.create();;
+var App, actionwords = Actionwords.create();
  
-module('mastering-fee-calculator', {
+module('Calcul de devis mastering', {
   beforeEach: function() {
     App = startApp();
   },
@@ -13,10 +13,9 @@ module('mastering-fee-calculator', {
   }
 });
 
-test('Basic album (uid:c0b3f3e2-1fcc-4570-a9d0-3189fe56975c)', function (assert) {
+test('Initialisation de la calculatrice (uid:bb889084-65f8-40e6-a976-b38e82660e53)', function (assert) {
   actionwords.etantDonneLaCalculatrice(assert);
-  actionwords.quandOnAjouteP1TitresDeMoinsDe4Minutes(assert, "12");
-  actionwords.alorsLeTotalTTCDoitEtreP1TTC(assert, "862.8");
+  actionwords.leTitreDoitEtreP1(assert, "Calcul de devis mastering");
 });
 
 
