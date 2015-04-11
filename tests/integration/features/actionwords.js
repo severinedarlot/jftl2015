@@ -41,6 +41,36 @@ var Actionwords = Ember.Object.extend({
     andThen(function() {
       fillIn(input, number);
     });
+  },
+  dDPPriceIsP1: function (assert, p1) {
+    andThen(function() {
+      assert.equal(find('#ddp-price').text(), p1 + ' €', 
+        "The ddp price is computed");
+    });
+  },
+  youUncheckTheDDPOption: function (assert) {
+    click('#ddp-checkbox');
+  },
+  aDDPWarningIsPrinted: function (assert) {
+    assert.ok(find('#ddp-message').length > 0);
+  },
+  theWAVSendingPriceIsPrice: function (assert, price) {
+    andThen(function() {
+      assert.equal(find('#wave-price').text(), price + ' €', 
+        "The wave price is computed");
+    });
+  },
+  theHTPriceIsP1: function (assert, p1) {
+    andThen(function() {
+      assert.equal(find('#ht-price').text(), p1 + ' € HT', 
+        "The ht price is computed");
+    });
+  },
+  theTTCPriceIsP1: function (assert, p1) {
+    andThen(function() {
+      assert.equal(find('#ttc-price').text(), p1 + ' € TTC', 
+        "The ttc price is computed");
+    });
   }
 });
 

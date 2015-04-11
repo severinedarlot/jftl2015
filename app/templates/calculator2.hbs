@@ -18,12 +18,6 @@
             <label class="col-xs-9">Nombre de titres à masteriser de plus de 12' </label>
             {{input type="number" class="col-xs-3 count-input fourth" value=fourthSliceCount min="0" max="30"}}
           </div>
-          <div class="checkbox">
-            <label>
-              {{input id="ddp-checkbox" type="checkbox" checkedBinding='ddp'}} Master DDP ({{ddpPackage}} &#8364; + {{ddpByTitle}} &#8364; par titre)
-            </label>
-            <div id="ddp-message" {{bind-attr class="ddp:hidden :alert :alert-warning"}} role="alert">Dans ce cas, nous vous livrons les fichiers .wav (16bits, 44.1 kHz) sur un serveur (ou un CD) et vous devrez les assembler sur un CD si besoin. Les encodages ISRC, EAN ainsi que CDTEXT vous incombent. Notez également qu'une image DDP est plus fiable qu'un CD-R pour créer un glass-master.</div>
-          </div>
         </form>
     </div>    
     <div class="col-md-6">
@@ -31,26 +25,6 @@
         <tr>
         <td><span id="total-count">{{totalCount}}</span> x traitements mastering (réglage individuel pour chaque titre)</td>
         <td id="mastering-price">{{titlesPrice}} &#8364;</td>
-        </tr>
-        <tr {{bind-attr class="ddp::hidden"}}>
-        <td>Création image DDP</td>
-        <td id="ddp-price">{{ddpPrice}} &#8364;</td>
-        </tr>
-        <tr {{bind-attr class="ddp:hidden"}}>
-        <td>Envoi de fichiers WAV</td>
-        <td id="wave-price">0 &#8364;</td>
-        </tr>
-        <tr>
-        <td>Total HT</td>
-        <td id="ht-price">{{htPrice}} &#8364; HT</td>
-        </tr>
-        <tr>
-        <td>TVA</td>
-        <td>20 &#37;</td>
-        </tr>
-        <tr>
-        <td>Total TTC</td>
-        <td id="ttc-price">{{ttcPrice}} &#8364; TTC</td>
         </tr>
       </table>
     </div>
