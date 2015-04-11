@@ -1,0 +1,23 @@
+Future versions of Ember CLI will not support v0.10.35. Please update to Node 0.12 or io.js.
+version: 0.2.0
+
+A new version of ember-cli is available (0.2.3). To install it, type ember update.
+Could not find watchman, falling back to NodeWatcher for file system events
+BuildingBuilding.Building..Building...BuildingBuilt project successfully. Stored in "/home/ubuntu/workspace/tmp/class-tests_dist-F4ZjRopa.tmp".
+ok 1 PhantomJS 1.9 - JSHint - .: app.js should pass jshint
+ok 2 PhantomJS 1.9 - JSHint - helpers: helpers/resolver.js should pass jshint
+ok 3 PhantomJS 1.9 - JSHint - helpers: helpers/start-app.js should pass jshint
+ok 4 PhantomJS 1.9 - JSHint - integration/features: integration/features/actionwords.js should pass jshint
+ok 5 PhantomJS 1.9 - Calcul de devis mastering: Initialisation de la calculatrice (uid:bb889084-65f8-40e6-a976-b38e82660e53)
+ok 6 PhantomJS 1.9 - JSHint - integration/features: integration/features/project_test.js should pass jshint
+ok 7 PhantomJS 1.9 - JSHint - models: models/calculator.js should pass jshint
+ok 8 PhantomJS 1.9 - JSHint - .: router.js should pass jshint
+ok 9 PhantomJS 1.9 - JSHint - routes: routes/calculator.js should pass jshint
+ok 10 PhantomJS 1.9 - JSHint - .: test-helper.js should pass jshint
+
+1..10
+# tests 10
+# pass  10
+# fail  0
+
+# ok
