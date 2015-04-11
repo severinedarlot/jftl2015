@@ -13,8 +13,10 @@ module('Mastering quote computation', {
   }
 });
 
-test('Calculator initialization', function (assert) {
+test('Calculator initialization (uid:bb889084-65f8-40e6-a976-b38e82660e53)', function (assert) {
   actionwords.theCalculatorsPage(assert);
   actionwords.theTitlePageShouldBeP1(assert, "Calcul de devis mastering");
 });
+
+
 
