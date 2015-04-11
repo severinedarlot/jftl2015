@@ -52,7 +52,10 @@ var Actionwords = Ember.Object.extend({
     click('#ddp-checkbox');
   },
   aDDPWarningIsPrinted: function (assert) {
-    assert.ok(find('#ddp-message').length > 0);
+    andThen(function() {
+      assert.ok(find('#ddp-message.hidden').length === 0,
+        'The DDP message should be printed');
+    });
   },
   theWAVSendingPriceIsPrice: function (assert, price) {
     andThen(function() {
@@ -71,6 +74,36 @@ var Actionwords = Ember.Object.extend({
       assert.equal(find('#ttc-price').text(), p1 + ' € TTC', 
         "The ttc price is computed");
     });
+  },
+  youCheckTheOnlineOption: function (assert) {
+    click('#online-checkbox');
+  },
+  aOnlineMessageIsPrinted: function (assert) {
+    andThen(function() {
+      assert.ok(find('#online-message.hidden').length === 0,
+        'The online message should be printed');
+    });
+  },
+  theOnlinePriceIsP1: function (assert, p1) {
+    andThen(function() {
+      assert.equal(find('#online-price').text(), p1 + ' €', 
+        "The online price is computed");
+    });
+  },
+  youCheckTheAlternativeOption: function (assert) {
+    click('#alternative-checkbox');
+  },
+  youCheckTheStemsOption: function (assert) {
+    click('#stems-checkbox');
+  },
+  shippingPriceIsP1: function (assert, p1) {
+    andThen(function() {
+      assert.equal(find('#shipping-price').text(), p1 + ' €', 
+        "The shipping price is computed");
+    });
+  },
+  youCheckTheShippingOption:function (assert) {
+    click('#shipping-checkbox');
   }
 });
 

@@ -126,5 +126,51 @@ test('DDP is 35 + 5 by title (uid:833752df-f168-41b6-b260-078ff50e6e26)', functi
   actionwords.theHTPriceIsP1(assert, "233");
 });
 
+test('Mastering online is -15% (uid:e2369af3-ff9c-4d75-be67-27b616b9bec7)', function (assert) {
+  actionwords.theCalculatorsPage(assert);
+  actionwords.theNthSliceIsNumber(assert, "first", "12");
+  actionwords.youCheckTheOnlineOption(assert);
+  actionwords.aOnlineMessageIsPrinted(assert);
+  actionwords.theOnlinePriceIsP1(assert, "-108");
+  actionwords.theHTPriceIsP1(assert, "611");
+  actionwords.theTTCPriceIsP1(assert, "733.2");
+});
+
+test('Alternative mastering is 10% of title prices (uid:33e473dd-08c2-4076-b30d-603a2d3017a6)', function (assert) {
+  actionwords.theCalculatorsPage(assert);
+  actionwords.theNthSliceIsNumber(assert, "first", "11");
+  actionwords.theNthSliceIsNumber(assert, "third", "1");
+  actionwords.youCheckTheAlternativeOption(assert);
+  actionwords.theMasteringPriceShouldBePriceTTC(assert, "650");
+  actionwords.dDPPriceIsP1(assert, "95");
+  actionwords.theHTPriceIsP1(assert, "810");
+  actionwords.theTTCPriceIsP1(assert, "972");
+});
+
+test('Stems +20% of title price (uid:73fe438d-ae46-436c-a2fb-3070feb3bb75)', function (assert) {
+  actionwords.theCalculatorsPage(assert);
+  actionwords.theNthSliceIsNumber(assert, "first", "11");
+  actionwords.theNthSliceIsNumber(assert, "second", "1");
+  actionwords.youCheckTheStemsOption(assert);
+  actionwords.theMasteringPriceShouldBePriceTTC(assert, "637");
+  actionwords.dDPPriceIsP1(assert, "95");
+  actionwords.theHTPriceIsP1(assert, "860");
+  actionwords.theTTCPriceIsP1(assert, "1032");
+});
+
+test('Shipping (+10€) (uid:6cf1460e-631f-424a-9a69-13beef65702e)', function (assert) {
+  actionwords.theCalculatorsPage(assert);
+  actionwords.theNthSliceIsNumber(assert, "first", "8");
+  actionwords.theNthSliceIsNumber(assert, "second", "2");
+  actionwords.theNthSliceIsNumber(assert, "third", "1");
+  actionwords.theNthSliceIsNumber(assert, "fourth", "1");
+  actionwords.youCheckTheShippingOption(assert);
+  actionwords.theMasteringPriceShouldBePriceTTC(assert, "715");
+  actionwords.dDPPriceIsP1(assert, "95");
+  actionwords.shippingPriceIsP1(assert, "10");
+  actionwords.theHTPriceIsP1(assert, "820");
+  actionwords.theTTCPriceIsP1(assert, "984");
+});
+
 
 

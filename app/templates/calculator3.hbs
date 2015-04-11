@@ -24,27 +24,6 @@
             </label>
             <div id="ddp-message" {{bind-attr class="ddp:hidden :alert :alert-warning"}} role="alert">Dans ce cas, nous vous livrons les fichiers .wav (16bits, 44.1 kHz) sur un serveur (ou un CD) et vous devrez les assembler sur un CD si besoin. Les encodages ISRC, EAN ainsi que CDTEXT vous incombent. Notez également qu'une image DDP est plus fiable qu'un CD-R pour créer un glass-master.</div>
           </div>
-          <div class="checkbox">
-            <label>
-              {{input id="stems-checkbox" type="checkbox" checkedBinding='stems'}} Mastering par stems (autres que PBO + a cappella) (+ 20%)
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              {{input id="alternative-checkbox" type="checkbox" checkedBinding='alternative'}} Version alternative (PBO, vocal up) (+ 10%)
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              {{input id="online-checkbox" type="checkbox" checkedBinding='online'}} Mastering online (- 15%)
-            </label>
-            <div id="online-message" {{bind-attr class="online::hidden :alert :alert-warning"}} role="alert">Dans ce cas, vous n'assistez pas à la scéance de mastering. Nous communiquerons par mail ou par téléphone.</div>
-          </div>
-            <div class="checkbox">
-            <label>
-              {{input id="shipping-checkbox" type="checkbox" checkedBinding='shipping'}} Envoi postal (+ 10 &#8364;)
-            </label>
-          </div>
         </form>
     </div>    
     <div class="col-md-6">
@@ -60,18 +39,6 @@
         <tr {{bind-attr class="ddp:hidden"}}>
         <td>Envoi de fichiers WAV</td>
         <td id="wave-price">0 &#8364;</td>
-        </tr>
-         <tr {{bind-attr class="alternative::hidden"}}>
-        <td>Version alternative</td>
-        <td id="alternative-price">{{alternativePrice}} &#8364;</td>
-        </tr>
-        <tr {{bind-attr class="online::hidden"}}>
-        <td>Mastering en ligne</td>
-        <td id="online-price">{{onlinePrice}} &#8364;</td>
-        </tr>
-        <tr {{bind-attr class="shipping::hidden"}}>
-        <td>Envoi postal et manutention</td>
-        <td id="shipping-price">{{shippingPrice}} &#8364;</td>
         </tr>
         <tr>
         <td>Total HT</td>
