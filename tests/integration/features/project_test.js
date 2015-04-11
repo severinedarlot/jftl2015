@@ -52,5 +52,24 @@ test('Prices for one title: More than 12 minutes (uid:23fdff01-7636-494b-8c9a-9e
 });
 
 
+function thePriceByTitleDecreasesAccordingTheTitleNumber (assert, title_count, total_price) {
+  actionwords.theCalculatorsPage(assert);
+  actionwords.theNthSliceIsNumber(assert, "first", String(title_count));
+  actionwords.theMasteringPriceShouldBePriceTTC(assert, String(total_price));
+}
+
+test('The price by title decreases according the title number: One (uid:8faaca20-002a-40dd-862b-b7c8d67c2989)', function (assert) {
+  thePriceByTitleDecreasesAccordingTheTitleNumber.apply(this, [assert, 1, 63]);
+});
+
+test('The price by title decreases according the title number: Two is 62*2 (uid:c0c07640-5b4b-4ad3-b42c-e4dfd43be837)', function (assert) {
+  thePriceByTitleDecreasesAccordingTheTitleNumber.apply(this, [assert, 2, 124]);
+});
+
+test('The price by title decreases according the title number: Six is 58*6 (uid:93c49689-c593-4398-8458-89c49258e31f)', function (assert) {
+  thePriceByTitleDecreasesAccordingTheTitleNumber.apply(this, [assert, 6, 348]);
+});
+
+
 
 
