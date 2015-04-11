@@ -1,0 +1,3 @@
+function {{ camelize_lower rendered_children.name }} (assert{{#if rendered_children.parameters}}, {{/if}}{{{ join rendered_children.parameters ', '}}}) {{#curly}}
+{{> body}}
+{{/curly}}
