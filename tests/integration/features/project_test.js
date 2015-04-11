@@ -4,7 +4,7 @@ import startApp from '../../helpers/start-app';
 import Actionwords from './actionwords';
 var App, actionwords = Actionwords.create();
  
-module('Calcul de devis mastering', {
+module('Mastering quote computation', {
   beforeEach: function() {
     App = startApp();
   },
@@ -13,10 +13,8 @@ module('Calcul de devis mastering', {
   }
 });
 
-test('Initialisation de la calculatrice (uid:bb889084-65f8-40e6-a976-b38e82660e53)', function (assert) {
-  actionwords.etantDonneLaCalculatrice(assert);
-  actionwords.leTitreDoitEtreP1(assert, "Calcul de devis mastering");
+test('Calculator initialization', function (assert) {
+  actionwords.theCalculatorsPage(assert);
+  actionwords.theTitlePageShouldBeP1(assert, "Calcul de devis mastering");
 });
-
-
 
