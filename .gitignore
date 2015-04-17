@@ -8,6 +8,10 @@
 /node_modules
 /bower_components
 
+# generated files
+/tests/integration/actionwords.js
+/tests/integration/project_test.js
+
 # test results
 results.tap
 
