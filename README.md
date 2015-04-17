@@ -29,6 +29,19 @@ You will need the following things properly installed on your computer.
 
 Make use of the many generators for code, try `ember help generate` for more details
 
+### Generate your Hiptest test
+
+Installer le publisher Hiptest 
+
+`gem install hiptest-publisher`
+
+Mettre à jour les `tokens` et les `test_run_id` dans les différents fichiers de config `hiptest-itN.config`
+
+Lancer la génération de tests :
+
+    hiptest-publisher -c ./hiptest-itN.config
+    
+
 ### Running Tests
 
 * `ember test`
