@@ -3,19 +3,19 @@
     <div class="col-md-6">
     	<form role="form-horizontal" role="form">
           <div class="row form-group">
-              <label class="col-xs-9">Nombre de titres à masteriser de moins de 4' </label>
+              <label class="col-xs-9">Title number of less than 4 minutes </label>
               {{input type="number" class="col-xs-3 count-input first" value=firstSliceCount min="0" max="30"}}
           </div>
           <div class="row form-group">
-            <label class="col-xs-9">Nombre de titres à masteriser entre 4' et 8' </label>
+            <label class="col-xs-9">Title number between 4 and 8 minutes </label>
             {{input type="number" class="col-xs-3 count-input second" value=secondSliceCount min="0" max="30"}}
           </div>
           <div class="row form-group">
-            <label class="col-xs-9">Nombre de titres à masteriser entre 8' et 12' </label>
+            <label class="col-xs-9">Title number between 8 and 12 minutes </label>
             {{input type="number" class="col-xs-3 count-input third" value=thirdSliceCount min="0" max="30"}}
           </div>
           <div class="row form-group">
-            <label class="col-xs-9">Nombre de titres à masteriser de plus de 12' </label>
+            <label class="col-xs-9">Title number longer than 12 minutes </label>
             {{input type="number" class="col-xs-3 count-input fourth" value=fourthSliceCount min="0" max="30"}}
           </div>
           <div class="checkbox">
@@ -50,7 +50,7 @@
     <div class="col-md-6">
     	<table class="table table-striped">
         <tr>
-        <td><span id="total-count">{{totalCount}}</span> x traitements mastering (réglage individuel pour chaque titre)</td>
+        <td><span id="total-count">{{totalCount}}</span> x mastering (individual tuning for each title)</td>
         <td id="mastering-price">{{titlesPrice}} &#8364;</td>
         </tr>
         <tr {{bind-attr class="ddp::hidden"}}>
@@ -58,7 +58,7 @@
         <td id="ddp-price">{{ddpPrice}} &#8364;</td>
         </tr>
         <tr {{bind-attr class="ddp:hidden"}}>
-        <td>Envoi de fichiers WAV</td>
+        <td>WAV file sending</td>
         <td id="wave-price">0 &#8364;</td>
         </tr>
          <tr {{bind-attr class="alternative::hidden"}}>
