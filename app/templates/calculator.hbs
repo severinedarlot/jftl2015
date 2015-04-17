@@ -2,56 +2,10 @@
   <div class="row">
     <div class="col-md-6">
     	<form role="form-horizontal" role="form">
-          <div class="row form-group">
-              <label class="col-xs-9">Title number of less than 4 minutes </label>
-              {{input type="number" class="col-xs-3 count-input first" value=firstSliceCount min="0" max="30"}}
-          </div>
-          <div class="row form-group">
-            <label class="col-xs-9">Title number between 4 and 8 minutes </label>
-            {{input type="number" class="col-xs-3 count-input second" value=secondSliceCount min="0" max="30"}}
-          </div>
-          <div class="row form-group">
-            <label class="col-xs-9">Title number between 8 and 12 minutes </label>
-            {{input type="number" class="col-xs-3 count-input third" value=thirdSliceCount min="0" max="30"}}
-          </div>
-          <div class="row form-group">
-            <label class="col-xs-9">Title number longer than 12 minutes </label>
-            {{input type="number" class="col-xs-3 count-input fourth" value=fourthSliceCount min="0" max="30"}}
-          </div>
-          <div class="checkbox">
-            <label>
-              {{input id="ddp-checkbox" type="checkbox" checkedBinding='ddp'}} Master DDP ({{ddpPackage}} &#8364; + {{ddpByTitle}} &#8364; par titre)
-            </label>
-            <div id="ddp-message" {{bind-attr class="ddp:hidden :alert :alert-warning"}} role="alert">Dans ce cas, nous vous livrons les fichiers .wav (16bits, 44.1 kHz) sur un serveur (ou un CD) et vous devrez les assembler sur un CD si besoin. Les encodages ISRC, EAN ainsi que CDTEXT vous incombent. Notez également qu'une image DDP est plus fiable qu'un CD-R pour créer un glass-master.</div>
-          </div>
-        </form>
+      </form>
     </div>    
     <div class="col-md-6">
     	<table class="table table-striped">
-        <tr>
-        <td><span id="total-count">{{totalCount}}</span> x mastering (individual tuning for each title)</td>
-        <td id="mastering-price">{{titlesPrice}}</td>
-        </tr>
-        <tr {{bind-attr class="ddp::hidden"}}>
-        <td>Création image DDP</td>
-        <td id="ddp-price">{{ddpPrice}}</td>
-        </tr>
-        <tr {{bind-attr class="ddp:hidden"}}>
-        <td>WAV file sending</td>
-        <td id="wave-price">0</td>
-        </tr>
-        <tr>
-        <td>Total HT</td>
-        <td id="ht-price">{{htPrice}}</td>
-        </tr>
-        <tr>
-        <td>TVA</td>
-        <td>20 &#37;</td>
-        </tr>
-        <tr>
-        <td>Total TTC</td>
-        <td id="ttc-price">{{ttcPrice}}</td>
-        </tr>
       </table>
     </div>
   </div>
