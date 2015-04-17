@@ -41,6 +41,11 @@ Lancer la génération de tests :
 
     hiptest-publisher -c ./hiptest-itN.config
     
+Remonter les résultats de test vers Hiptest
+
+    ember test > results.tap
+    hiptest-publisher -c ./hiptest-itN.config -p results.tap
+    
 
 ### Running Tests
 
